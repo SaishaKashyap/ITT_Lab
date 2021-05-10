@@ -1,0 +1,30 @@
+body{
+  background-color: #94ebcd;
+  color: #161d6f;
+}
+
+h1{
+  text-align: center;
+  color:#1e212d;
+}
+
+h3{
+  color:#1e212d;
+}
+
+table{
+  padding: 1%;
+}
+th{
+  text-align: left;
+  padding: 0px 10px;
+}
+
+td{
+  padding:10px;
+}
+
+.design{
+  color:#03506f;
+  font-weight: bold;
+}

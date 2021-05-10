@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Javascript I</title>
+    </head>
+    <body>
+        <label for="ip">Enter text to convert to Pig Latin Format</label>
+        <input type="text" id="ip"><br/><br/>
+        <button onclick="convert()">convert</button>
+        <script type="text/javascript">
+        function convert()
+{
+  var str1=document.getElementById("ip").value;
+  var str2=str1.split(" ");
+  var str3="";
+  var i;
+  for(i=0;i<str2.length;i++)
+  {
+      var s1=str2[i].substr(1,str2[i].length);
+      var s2=str2[i].charAt(0)+"ay";
+      str3+=s1+s2+" ";
+  }
+  console.log(str3);
+  document.getElementById("ip").value=str3;
+}
+        </script>
+    </body>
+
+</html>
