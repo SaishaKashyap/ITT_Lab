@@ -8,41 +8,43 @@
         </style>
         <title>Javascript II</title>
     </head>
-    <body onload="getNum()">
-        <table id="table">
+    <body onload="getNum()">    <!--Call getNum function-->
+        <table id="table">      <!--Define table for storing values-->
             <tr>
-                <th>Number</th>
+                <th>Number</th>  
                 <th>Square</th>
             </tr>
         </table><br/><br/>
         <input type="text" id="label" size="40" disabled>
         <input type="text" id="ip">
     <script>
-    function getNum()
+
+    function getNum()       
 {
   var n=prompt("Enter The Number N");
-  var num=parseInt(n);
-  if(isNaN(num))
+  var num=parseInt(n);      //Convert user input to integer
+  if(isNaN(num))            //Check if its blank
   {
       alert("Please Enter a number!");
   }
   else
   {
       var t=document.getElementById("table");
-      var a=1;
+      var a=1;      
       var b=1;
       var fib=[];
       fib.push(1);
       fib.push(1);
       for(var i=2;i<=num-1;i++)
       {
-          fib.push(fib[i-1]+fib[i-2]);
+          fib.push(fib[i-1]+fib[i-2]);      //Generate Fibonacci series
       }
-      for(var i=1;i<=num;i++)
+      for(var i=1;i<=num;i++)           //Add data to table
       {
           t.innerHTML+="<tr><td>"+i+"</td><td>"+i*i+"</td></tr>";
       }
-      document.getElementById("label").value="Fibonacci Series of "+num+" Elements is ";
+      //Display Fibonacci series
+      document.getElementById("label").value="Fibonacci Series of "+num+" Elements is ";     
       document.getElementById("ip").value=fib;
   }
 }
